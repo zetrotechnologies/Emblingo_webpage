@@ -1,0 +1,89 @@
+.contactPage {
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--background);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.headerSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 4rem 0 6rem;
+  background-color: var(--surface);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactCard {
+  background-color: var(--surface-white);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.icon {
+  color: #fff;
+  background-color: var(--primary);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.contactCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.contactCard p, .contactCard a {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contactCard a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

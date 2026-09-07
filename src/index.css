@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Emblingo App Sync Palette */
+  --primary: #168EF0; /* Bright App Blue */
+  --primary-hover: #127fd0;
+  --accent: #20C4F3; /* Vivid Cyan */
+  --accent-light: #e6f7fc;
+  
+  /* Surfaces & Backgrounds */
+  --background: #FFFFFF; /* White Canvas */
+  --surface: #EEF8FF; /* Very Light Blue / Pastel */
+  --surface-white: #FFFFFF;
+  --surface-hover: #F3F9FF;
+  
+  /* Typography */
+  --text: #172033; /* Dark text */
+  --text-muted: #64748B; /* Secondary text */
+  --text-light: #94A3B8;
+  
+  /* Elements */
+  --border: #E5EEF7;
+  --border-light: #F1F5F9;
+  
+  /* App-style Radii */
+  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  
+  /* Soft App Shadows */
+  --shadow-sm: 0 4px 12px rgba(22, 142, 240, 0.05);
+  --shadow: 0 8px 24px rgba(22, 142, 240, 0.08);
+  --shadow-lg: 0 16px 40px rgba(22, 142, 240, 0.12);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll just in case */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 0.75em;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 3.5rem; letter-spacing: -0.03em; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.py-section { padding-top: 6rem; padding-bottom: 6rem; }
+
+@media (max-width: 768px) {
+  .py-section { padding-top: 4rem; padding-bottom: 4rem; }
+  .container { padding: 0 1.5rem; }
+}
+
+/* Base focus outline for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}

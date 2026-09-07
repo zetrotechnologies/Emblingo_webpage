@@ -1,0 +1,83 @@
+.footer {
+  background-color: var(--surface);
+  color: var(--text);
+  padding-top: 5rem;
+  border-top: 1px solid var(--border);
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.logoImage {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.description {
+  color: var(--text-muted);
+  max-width: 350px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.linksCol h3 {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.linksCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksCol li {
+  margin-bottom: 1rem;
+}
+
+.linksCol a {
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.linksCol a:hover {
+  color: var(--primary);
+}
+
+.copyright {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
